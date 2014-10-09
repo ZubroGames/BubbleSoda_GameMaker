@@ -3,36 +3,55 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="2" name="datafiles"/>
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\bbl_orange</sprite>
-    <sprite>sprites\bbl_orange_mask</sprite>
-    <sprite>sprites\bbl_lemon</sprite>
-    <sprite>sprites\bbl_lemon_mask</sprite>
-    <sprite>sprites\bbl_blueberries</sprite>
-    <sprite>sprites\bbl_blueberries_mask</sprite>
-    <sprite>sprites\lvl_cannon</sprite>
-    <sprite>sprites\lvl_wall</sprite>
+    <sprites name="game">
+      <sprite>sprites\bbl_orange</sprite>
+      <sprite>sprites\bbl_orange_mask</sprite>
+      <sprite>sprites\bbl_lemon</sprite>
+      <sprite>sprites\bbl_lemon_mask</sprite>
+      <sprite>sprites\bbl_blueberries</sprite>
+      <sprite>sprites\bbl_blueberries_mask</sprite>
+      <sprite>sprites\lvl_cannon</sprite>
+      <sprite>sprites\lvl_wall</sprite>
+    </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <backgrounds name="world">
+      <background>background\tex</background>
+    </backgrounds>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_canon_controll.gml</script>
+    <scripts name="game">
+      <script>scripts\scr_canon_controll.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_cannon</object>
-    <object>objects\obj_orange</object>
-    <object>objects\obj_lemon</object>
-    <object>objects\obj_blueberries</object>
-    <object>objects\obj_wall</object>
-    <object>objects\obj_orange_collision</object>
+    <objects name="game">
+      <object>objects\obj_cannon</object>
+      <object>objects\obj_orange</object>
+      <object>objects\obj_lemon</object>
+      <object>objects\obj_blueberries</object>
+      <object>objects\obj_wall</object>
+      <object>objects\obj_orange_collision</object>
+    </objects>
+    <objects name="world">
+      <object>objects\level_enter</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <rooms name="world">
+      <room>rooms\world_1</room>
+    </rooms>
+    <rooms name="game">
+      <room>rooms\level_1</room>
+    </rooms>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41905.8361842245</constant>
+    <constant name="GM_build_date">41921.4844129167</constant>
     <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>
